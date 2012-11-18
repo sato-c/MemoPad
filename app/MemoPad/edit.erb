@@ -15,18 +15,19 @@
       <input type="hidden" name="id" value="<%= @memopad.object %>"/>
       
           <div data-role="fieldcontain">
-            <label for="memopad[subject]" class="fieldLabel">Subject</label>
+            <label for="memopad[subject]" class="fieldLabel">題名</label>
             <input type="text" id="memopad[subject]" name="memopad[subject]" value="<%= @memopad.subject %>" <%= placeholder( "Subject" ) %> />
           </div>
       
           <div data-role="fieldcontain">
-            <label for="memopad[date]" class="fieldLabel">Date</label>
+            <label for="memopad[date]" class="fieldLabel">日付</label>
             <input type="text" id="memopad[date]" name="memopad[date]" value="<%= @memopad.date %>" <%= placeholder( "Date" ) %> />
           </div>
       
           <div data-role="fieldcontain">
-            <label for="memopad[body]" class="fieldLabel">Body</label>
-            <input type="text" id="memopad[body]" name="memopad[body]" value="<%= @memopad.body %>" <%= placeholder( "Body" ) %> />
+            <label for="memopad[body]" class="fieldLabel">本文</label>
+			<textarea id="memopad[body]" name="memopad[body]" <%= placeholder("Body") %>><%= @memopad.body %></textarea>
+
           </div>
       
       <input type="submit" value="Update"/>

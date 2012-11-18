@@ -1,0 +1,30 @@
+<div data-role="page" data-add-back-btn="true">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :index %>
+    <h1><%= @memopad.subject %></h1>
+    <%= link_to "Edit", :action => :edit, :id => @memopad.object %>
+  </div>
+
+  <div data-role="content">
+    <table>
+      
+      <tr>
+    	<td class="itemLabel">Subject</td>
+        <td class="itemValue"><%= @memopad.subject%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Date</td>
+        <td class="itemValue"><%= @memopad.date%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Body</td>
+        <td class="itemValue"><%= @memopad.body%></td>
+      </tr>
+      
+    </table>
+  </div>
+
+</div>

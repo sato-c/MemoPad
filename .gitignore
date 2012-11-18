@@ -1,9 +1,6 @@
 rholog-*
 sim-*
-bin/libs
-bin/RhoBundle
-bin/tmp
-bin/target
-bin/*.ap_
+bin/
 *.o
 *.jar
+rhosimulator/

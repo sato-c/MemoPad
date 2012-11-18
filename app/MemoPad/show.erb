@@ -1,0 +1,34 @@
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1><%= @memopad.subject %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+    <a href="<%= url_for :action => :edit, :id => @memopad.object %>" class="ui-btn-right" data-icon="star">
+      Edit
+    </a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      
+          <li>
+            <div class="itemLabel">Subject</div>
+            <div class="itemValue"><%= @memopad.subject %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Date</div>
+            <div class="itemValue"><%= @memopad.date %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Body</div>
+            <div class="itemValue"><%= @memopad.body %></div>
+          </li>
+      
+    </ul>
+  </div>
+
+</div>

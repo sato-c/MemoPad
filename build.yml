@@ -1,0 +1,24 @@
+#sdk: "C:/MotorolaRhoMobileSuite2.1.1.7/ruby/lib/ruby/gems/1.9.1/gems/rhodes-3.4.2"
+sdkversion: 3.4.0
+name: MemoPad
+version: 1.0
+vendor: rhomobile
+build: debug
+bbver: 4.6
+applog: rholog.txt
+iphone:
+  configuration: Release
+  sdk: iphonesimulator5.0
+  provisionprofile:
+  codesignidentity:
+  entitlements:
+  BundleIdentifier: com.rhomobile.memopad
+  BundleURLScheme: memopad
+wp:
+  productid: 'b35a1480-1357-0130-9a81-00270e06403c'
+symbian:
+  uid: '0xe7638a84'
+android:
+  version: 2.1
+
+extensions: ["json", "another-extension"]

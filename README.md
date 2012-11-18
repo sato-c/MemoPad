@@ -1,0 +1,4 @@
+MemoPad
+=======
+
+MemoPadをRhodesで作ってみた。

@@ -14,21 +14,43 @@
     <ul data-role="listview">
       
           <li>
-            <div class="itemLabel">Subject</div>
+            <div class="itemLabel">題名</div>
             <div class="itemValue"><%= @memopad.subject %></div>
           </li>
       
           <li>
-            <div class="itemLabel">Date</div>
+            <div class="itemLabel">日付</div>
             <div class="itemValue"><%= @memopad.date %></div>
           </li>
       
           <li>
-            <div class="itemLabel">Body</div>
+            <div class="itemLabel">本文</div>
             <div class="itemValue"><%= @memopad.body %></div>
           </li>
       
     </ul>
+
   </div>
 
+  <%# 画面下にバーを固定する %>
+  <div data-role="footer" data-position="fixed">
+      <a href="javascript:confirmDialog('<%= url_for :action => :delete, :id => @memopad.object %>','削除しますか?');" class="ui-btn-left" data-icon="delete" data-direction="reverse">
+        Delete
+      </a>
+  </div>
+  
+  <%# 削除の確認をする %>
+  <script>
+  function confirmDialog(url,msg) {
+    var result = confirm(msg);
+
+    // 確認ダイアログでyesを選ぶとtrueが返ってくるので、ページ遷移させる
+    if (result == true) {
+      $.mobile.changePage(url, {reverse: true});
+      return true;
+    }
+    
+    return false;
+  }
+  </script>
 </div>
